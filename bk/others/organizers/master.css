@@ -1,0 +1,211 @@
+/* @group Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* @end Reset */
+
+/* @group "Fonts" */
+@font-face {
+  font-family: "Open Sans";
+  src: url('../fonts/OpenSans-Regular.ttf') format("truetype");
+}
+/* @end */
+
+/* @group Common */
+body {
+  font: 14px "Open Sans", "Lucida Grande", "Segoe UI", Arial, sans-serif;
+  background: #FFF;
+  color: #355C6C;
+}
+
+/* @end Common */
+
+/* @group Header */
+header.uds {
+  height: 80px;
+  line-height: 80px;
+  background: #FFF url('../images/eurochem.png') no-repeat top left;
+  background-size: 80px 80px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: lighter;
+}
+/* @end Header */
+
+/* @group Layout */
+.fixed {
+  width: 680px;
+  margin: 0 auto;
+}
+/* @end Layout */
+
+/* @group Systems */
+.systems, .maintenance {
+  padding: 40px 50px 0 50px;
+  background: #5994AA;
+  overflow: auto;
+}
+
+.systems a {
+  float: left;
+  display: block;
+  width: 50%;
+  margin-bottom: 40px;
+  text-decoration: none;
+  color: #355C6C;
+  cursor: pointer;
+
+  border-left: 3px solid transparent;
+  padding-left: 5px;
+  line-height: 130%;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+
+  -webkit-transition: border-left 0.1s linear;
+  -moz-transition: border-left-color 0.1s linear;
+  -ms-transition: border-left-color 0.1s linear;
+  transition: border-left-color 0.1s linear;
+}
+
+.systems a h4 {
+  font-size: 22px;
+  font-weight: lighter;
+  margin-bottom: 5px;
+
+  -webkit-transition: color 0.1s linear;
+  -moz-transition: color 0.1s linear;
+  -ms-transition: color 0.1s linear;
+  transition: color 0.1s linear;
+}
+
+.systems a:hover { border-left-color: #355C6C; }
+.systems a:hover h4 { color: #22404C; }
+/* @end Systems */
+
+/* @group Maintenance */
+.maintenance { padding-bottom: 40px; }
+
+.maintenance h3 {
+  font-size: 24px;
+  font-weight: lighter;
+  text-align: center;
+}
+
+.maintenance p {
+  margin-top: 20px;
+}
+/* @end Maintenance */
+
+/* @group Message */
+.info {
+  position: relative;
+  padding: 40px 50px 40px 120px;
+  background: #5994AA;
+}
+
+.info h2 {
+  color: #134A60;
+  font-size: 22px;
+  font-weight: lighter;
+  margin-bottom: 15px;
+}
+
+.info h3 {
+  position: absolute;
+  color: #71B1C9;
+  font-size: 40px;
+  font-weight: lighter;
+  left: 20px;
+  top: 50%;
+  margin-top: -30px;
+}
+
+.info p {
+  margin-top: 5px;
+}
+/* @end Message */
+
+/* @group Support */
+.support {
+  background: #2E85A4;
+  padding: 20px;
+}
+
+.centered {
+  margin-left: 160px;
+}
+
+.support h2 {
+  color: #FFF;
+  font-size: 22px;
+  font-weight: lighter;
+  margin-bottom: 20px;
+}
+
+.support .topics li { margin: 5px 0; }
+.support .topics .news { margin-top: 15px; }
+
+.support .topics li ul { margin-left: 5px; }
+
+.support .dimmed a { color: #206077; }
+.support .highlight a { color: #104256; }
+
+.support a {
+  color: #134A60;
+
+  -webkit-transition: color 0.1s linear;
+  -moz-transition: color 0.1s linear;
+  -ms-transition: color 0.1s linear;
+  transition: color 0.1s linear;
+}
+.support a:hover  { color: #0A2E3D; }
+
+.support .contact {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: lighter;
+  color: #ADE3F6;
+}
+/* @end Support */

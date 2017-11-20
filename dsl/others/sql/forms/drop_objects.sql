@@ -1,0 +1,12 @@
+drop type xxdoo_dsl_frm_collection;
+drop type xxdoo_dsl_frm_fieldset;
+drop type xxdoo_dsl_frm_fields;
+drop type xxdoo_dsl_frm_field;
+drop type xxdoo_dsl_frm_suggest;
+drop type xxdoo_dsl_frm_contents;
+drop type xxdoo_dsl_frm_content;
+drop type xxdoo_dsl_frm_forms;
+drop type xxdoo_dsl_frm_form;
+drop type xxdoo_dsl_frm_core;
+drop type xxdoo_dsl_frm_list;
+drop type xxdoo_dsl_frm;

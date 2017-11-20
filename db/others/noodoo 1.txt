@@ -1,0 +1,46 @@
+STRUCTURE
+=========
+
+Book
+  name
+  resource (entry name)
+
+  DB (Data-access object, ex. book.db['deals'])
+  Roles
+  Pages
+
+
+Role
+  name
+  pages (each with condition function)
+
+  
+Page
+  name
+  context (function used to prepare special context) => context:Object
+  content (h-based function) <= entry, user, context
+  callbacks
+  
+
+
+REQUEST PROCESSING
+==================
+
+HTTP Request (URL, Params)
+
+  - get book using name from url 
+  - get user from cookie / SSO
+  - get role attached to that user
+  - get entry ID from url or params
+  - get state from url or params
+  - load entry
+  - (*) filter role pages through condition callback(state, entry, user)
+  
+  - when url is callback
+    - try to find callback by its id via authorised pages in step (*)
+    - call callback method    
+    - filter role pages through condition callback(user, entry) (**)
+  
+  - call context function and content renderer for each authorised page (* or **)
+  - create response context { id, sidebar, toolbar, content }
+  - send response

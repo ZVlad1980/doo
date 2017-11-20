@@ -1,0 +1,36 @@
+spc
+
+  type g_list_id_type is table of number;
+  g_list_id g_list_id_type;
+
+function get_ids return g_list_id_type pipelined;
+function get_objects_test return xxdoo.xxdoo_cntr_contractors_typ;
+
+
+
+body
+----------------------------
+  function get_ids return g_list_id_type pipelined is
+  begin
+    for i in 1..g_list_id.count loop
+      pipe row (g_list_id(i));
+    end loop;
+  end;
+  --
+  function get_objects_test return xxdoo.xxdoo_cntr_contractors_typ is
+    l_objects xxdoo.xxdoo_cntr_contractors_typ;
+    --
+    cursor l_objects_cur is
+      select value(v) o
+      from   xxdoo.xxdoo_cntr_contractors_v v,
+             table(xxdoo.xxdoo_cntr_contractors_pkg.get_ids) i
+      where  v.id = i.column_value;
+  begin
+    --
+    open l_objects_cur;
+    fetch l_objects_cur bulk collect into l_objects;
+    close l_objects_cur;
+    --
+    return l_objects;
+    --
+  end get_objects_test;
